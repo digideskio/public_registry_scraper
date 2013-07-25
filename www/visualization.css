@@ -1,0 +1,110 @@
+body {
+    font-family: Arial,Liberation Sans,sans-serif;
+}
+#mp-disclosures-chart{
+    background-color: #5c5c5c;
+}
+text {
+    fill: #FFF;
+    font-size: 8pt;
+    pointer-events: none;
+}
+
+/* organization cells */
+.organization text, .hover-text-node text {
+    fill: #D9D9D9;
+}
+text.hidden_until_hover, rect.text-placeholder {
+    opacity: 0;
+}
+rect.text-placeholder:hover + text,
+.hover-text-node.selected text {
+  font-size: 106%;
+  font-weight: bold;
+  fill: #FFF;
+}
+rect.text-placeholder:hover + .hidden_until_hover,
+.hover-text-node.selected text {
+    opacity: 1;
+}
+.organization.selected rect{
+    stroke: #E3E3E3;
+    stroke-width: 2px;
+}
+
+/* MP cells */
+.party-colours, .party-colours.unknown,
+.party-colours:hover + text{
+    fill: #00a4aa;
+}
+.party-colours.conservative,
+.mp-cell rect.conservative:hover + text{
+  fill: #102a9c;
+}
+.party-colours.new.democratic,
+.mp-cell rect.new.democratic:hover + text{
+  fill: #F58220;
+}
+.party-colours.liberal,
+.mp-cell rect.liberal:hover + text{
+  fill: #C20000;
+}
+.party-colours.green,
+.mp-cell rect.green:hover + text{
+  fill: #4AAA42;
+}
+.party-colours.bloc,
+.mp-cell rect.bloc:hover + text{
+  fill: #07B1E5;
+}
+
+.mp-cell rect:hover {
+    fill: #000;
+}
+.mp-cell rect:hover + text,
+.mp-cell.selected text{
+    font-weight: bold;
+}
+.mp-cell.selected rect{
+  stroke: #FAFAFA;
+  stroke-width: 2px;
+}
+
+/* links */
+.link * {
+    opacity: 0;
+}
+.link.selected * {
+    opacity: 1;
+}
+.link path {
+    stroke: #D9D9D9;
+    stroke-width: 2px;
+    fill: none;
+}
+.link circle {
+    stroke: none;
+    fill: none;
+}
+.link.selected circle {
+    fill: #00ff18;
+}
+.link.selected.hover circle {
+    stroke: #FFF;
+    stroke-width: 2px;
+}
+text.info-icon {
+    fill: #a500ff;
+}
+.hover-shield {
+    fill-opacity: 0;
+}
+.link.selected text.info {
+   opacity: 0;
+   fill: #00ff18;
+   font-size: 10pt;
+   font-weight: bold;
+}
+.link.selected.hover text.info {
+   opacity: 1;
+}
